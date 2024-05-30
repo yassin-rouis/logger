@@ -1,6 +1,6 @@
 {
-  "name": "logger",
-  "version": "1.0.0",
+  "name": "@yassinrouis/logger",
+  "version": "0.1.1",
   "description": "A simple and colorful logger for NodeJS !",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
-  }
+  },
+  "devDependencies": {}
 }

@@ -25,36 +25,65 @@ npm i @yassinrouis/logger
 ```js
 const Logger = require("@yassin-rouis/logger");
 
-// These are the default values
-Logger.hasIcons = true   // Show UTF-8 icons before time
-Logger.colored  = true   // Use colors
+let log = new Logger(); // Simple constructor
+
+// or
+let log = new Logger({
+  level: Logger.DEBUG, // Change the logging level
+  icons: true,         // Print UTF-8 icons before time
+  clear: true          // Clear the console when an instance is created
+})
 ```
 ### Usage
 
 There are 6 levels of loggings :
 - Developpement :
-  - `verbose`
-  - `debug`
-  - `log`
+  - `verbose` (10)
+  - `debug` (20)
+  - `log` (30)
 - Display :
-  - `info`
-  - `success`
+  - `info` (40)
+  - `success` (35)
 - Problems and errors :
-  - `warn`
-  - `error`
-  - `fatal`
+  - `warn` (50)
+  - `error` (60)
+  - `fatal` (70)
 
 Each level can be used as follow :
 ```js
-// Logger.<level>("Your", "message", "on", "multiple \n lines")
+// log.<level>("Your", "message", "on", "multiple \n lines")
 // example :
 
-Logger.log("We are", 7, "in the room !")
-Logger.error("Can't find the eggs !")
+log.log("We are", 7, "in the room !")
+log.error("Can't find the eggs !")
 ```
+### Methods
+`<Logger>` is any instance of `Logger`.
+#### Logging methods
+* `<Logger>.verbose(...<objects or string>)`
+* `<Logger>.debug(...<objects or string>)`
+* `<Logger>.log(...<objects or string>)`
+* `<Logger>.info(...<objects or string>)`
+* `<Logger>.success(...<objects or string>)`
+* `<Logger>.warn(...<objects or string>)`
+* `<Logger>.error(...<objects or string>)`
+* `<Logger>.fatal(...<objects or string>)`
+* `<Logger>.clear()`
+  
+  Clear node's console (print \\x1Bc)
+#### Settings
+* `<Logger>.setLevel(<level | int>)`
+
+  Set logging level. Can be a level like ... :
+  
+  `Logger.VERBOSE, Logger.DEBUG, Logger.LOG, etc ...`
+* `<Logger>.getLevel() : int`
+* `<Logger>.showIcons(<true | false>)`
+* `<Logger>.hasIcons() : boolean`
+
 ## Coming soon
 - [x] Colorful Logger
-- [ ] Logging level
+- [x] Logging level
 - [ ] NPM package
 - [ ] Print to file
 - [ ] Print to write stream

@@ -1,6 +1,6 @@
 
 ![favorite](https://img.shields.io/badge/ROUIS'%20favorite-%E2%AD%90-yellow?style=flat)
-![version](https://img.shields.io/badge/version-0.1.1-blue?style=flat)
+![version](https://img.shields.io/badge/version-0.2.1-blue?style=flat)
 
 # Logger
 

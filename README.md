@@ -8,9 +8,11 @@
 * [Introduction](#introduction)
 * [Documentation](#documentation)
   * [Install](#install)
+  * [Usage](#usage)
 * [Coming soon](#coming-soon)
 ## Introduction
 `logger` is a colorful logger for organizing your messages, and easily returning to them !
+
 ![Imgur](https://i.imgur.com/sNYYaJR.png)
 ## Documentation
 

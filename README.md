@@ -19,7 +19,7 @@
 ### Install
 1) Download from NPM :
 ```bash
-# Coming soon
+npm i @yassinrouis/logger
 ```
 2) Loading and initialization:
 ```js

@@ -1,15 +1,37 @@
 {
   "name": "@yassinrouis/logger",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A simple and colorful logger for NodeJS !",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mohamed-Yassin ROUIS",
+  "author": {
+    "email": "contact@yassinrouis.com",
+    "name": "Mohamed-Yassin ROUIS",
+    "url": "https://yassinrouis.com/"
+  },
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "https://github.com/yassin-rouis/logger#Logger",
+  "keywords": ["logging", "logger", "log", "color"],
+  "bugs": {
+    "url": "https://github.com/yassin-rouis/logger/issues",
+    "email": "myassin.rouis@gmail.com"
+  },
+  "private": false,
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/YassinRouis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yassin-rouis/logger.git"
+  },
+  "publishConfig":{
+    "access": "public"
+  }
 }

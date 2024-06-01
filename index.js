@@ -4,6 +4,16 @@ process.stdout.write('\x1Bc')
 class Logger {
     static hasIcons = true;
     static colored = true;
+    static loggingLevel = Logger.LOG;
+
+    static VERBOSE = 10;
+    static DEBUG = 20;
+    static LOG = 30;
+    static INFO = 40;
+    static SUCCESS = 40;
+    static WARN = 50;
+    static ERROR = 60;
+    static FATAL = 70;
 
     static objectsToString(...objects) {
         let text = []
@@ -108,7 +118,9 @@ class Logger {
      * @param {string} text 
      * @param {DisplayColors} displayColors 
      */
-    static logRaw(text, logType, time, icon, displayColors) {
+    static logRaw(logLevel, text, logType, time, icon, displayColors) {
+        if(logLevel < Logger.loggingLevel) return
+        
         let lines = text.trim().split("\n")
 
         logType = logType || "?"
@@ -133,7 +145,7 @@ class Logger {
     }
 
     static verbose(...o) {
-        this.logRaw(this.objectsToString(...o), "V", this.$getTimePrefix(), "", {
+        this.logRaw(10, this.objectsToString(...o), "V", this.$getTimePrefix(), "", {
             icon : {fg: "gray", bg: null},
             time : {fg: "grey", bg: "black"},
             type : {fg: "grey", bg: null, st: "italic"},
@@ -141,7 +153,7 @@ class Logger {
         })
     };
     static debug(...o) {
-        this.logRaw(this.objectsToString(...o), "D", this.$getTimePrefix(), "", {
+        this.logRaw(20, this.objectsToString(...o), "D", this.$getTimePrefix(), "", {
             icon : {fg: "gray", bg: null},
             time : {fg: "grey", bg: "black"},
             type : {fg: "grey", bg: null},
@@ -149,7 +161,7 @@ class Logger {
         })
     };
     static log(...o) {
-        this.logRaw(this.objectsToString(...o), "L", this.$getTimePrefix(), "", {
+        this.logRaw(30, this.objectsToString(...o), "L", this.$getTimePrefix(), "", {
             icon : {fg: "white", bg: null},
             time : {fg: "white", bg: "black"},
             type : {fg: "white", bg: "grey"},
@@ -157,7 +169,7 @@ class Logger {
         })
     };
     static info(...o) {
-        this.logRaw(this.objectsToString(...o), "I", this.$getTimePrefix(), "•", {
+        this.logRaw(40, this.objectsToString(...o), "I", this.$getTimePrefix(), "•", {
             icon : {fg: "blue", bg: null},
             time : {fg: "brightWhite", bg: "black"},
             type : {fg: "brightWhite", bg: "blue"},
@@ -165,7 +177,7 @@ class Logger {
         })
     };
     static success(...o) {
-        this.logRaw(this.objectsToString(...o), "S", this.$getTimePrefix(), "•", {
+        this.logRaw(40, this.objectsToString(...o), "S", this.$getTimePrefix(), "•", {
             icon : {fg: "brightGreen", bg: null},
             time : {fg: "brightWhite", bg: "black"},
             type : {fg: "brightWhite", bg: "brightGreen"},
@@ -173,7 +185,7 @@ class Logger {
         })
     };
     static warn(...o) {
-        this.logRaw(this.objectsToString(...o), "W", this.$getTimePrefix(), "⚠", {
+        this.logRaw(50, this.objectsToString(...o), "W", this.$getTimePrefix(), "⚠", {
             icon : {fg: "yellow", bg: null},
             time : {fg: "yellow", bg: "black"},
             type : {fg: "brightWhite", bg: "yellow"},
@@ -181,7 +193,7 @@ class Logger {
         })
     };
     static error(...o) {
-        this.logRaw(this.objectsToString(...o), "E", this.$getTimePrefix(), "🞪", {
+        this.logRaw(60, this.objectsToString(...o), "E", this.$getTimePrefix(), "🞪", {
             icon : {fg: "brightRed", bg: null},
             time : {fg: "brightRed", bg: "black"},
             type : {fg: "brightWhite", bg: "brightRed"},
@@ -189,7 +201,7 @@ class Logger {
         })
     };
     static fatal(...o) {
-        this.logRaw(this.objectsToString(...o), "F", this.$getTimePrefix(), "🞪", {
+        this.logRaw(70, this.objectsToString(...o), "F", this.$getTimePrefix(), "🞪", {
             icon : {fg: "brightRed", bg: null},
             time : {fg: "brightRed", bg: "black"},
             type : {fg: "brightWhite", bg: "brightRed"},

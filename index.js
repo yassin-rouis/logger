@@ -48,9 +48,29 @@ class Logger {
     }
 
     constructor({level=Logger.LOG, icons=true, clear=true}={}) {
-        this.$loggingLevel = level
-        this.$hasIcons = icons
+        this.$loggingLevel = level;
+        this.$hasIcons = icons;
         if(clear) process.stdout.write('\x1Bc');
+    }
+
+    setLevel(level) {
+        this.$loggingLevel = level;
+    }
+
+    getLevel() {
+        return this.$loggingLevel;
+    }
+
+    showIcons(icons = true) {
+        this.$hasIcons = icons;
+    }
+
+    hasIcons() {
+        return this.$hasIcons
+    }
+    
+    clear() {
+        process.stdout.write('\x1Bc');
     }
 
     logRawLine(icon, logType, time, line, displayColors) {

@@ -1,10 +1,12 @@
 {
   "name": "@yassinrouis/logger",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "description": "A simple and colorful logger for NodeJS !",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "author": {
     "email": "contact@yassinrouis.com",
@@ -15,7 +17,11 @@
   "dependencies": {
     "colors": "^1.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.5.1",
+    "typescript": "^5.5.4",
+    "eslint": "^9.9.1"
+  },
   "homepage": "https://github.com/yassin-rouis/logger#Logger",
   "keywords": [
     "logging",

@@ -1,6 +1,6 @@
 
 ![favorite](https://img.shields.io/badge/ROUIS'%20favorite-%E2%AD%90-yellow?style=flat)
-![version](https://img.shields.io/badge/version-0.2.1-blue?style=flat)
+![version](https://img.shields.io/badge/version-1.0.1-blue?style=flat)
 
 # Logger
 
@@ -30,7 +30,6 @@ let log = new Logger(); // Simple constructor
 // or
 let log = new Logger({
   level: Logger.DEBUG, // Change the logging level
-  icons: true,         // Print UTF-8 icons before time
   clear: true          // Clear the console when an instance is created
 })
 ```
@@ -49,7 +48,7 @@ There are 6 levels of loggings :
   - `error` (60)
   - `fatal` (70)
 
-Each level can be used as follow :
+Each level can be used as follows :
 ```js
 // log.<level>("Your", "message", "on", "multiple \n lines")
 // example :
@@ -78,12 +77,11 @@ log.error("Can't find the eggs !")
   
   `Logger.VERBOSE, Logger.DEBUG, Logger.LOG, etc ...`
 * `<Logger>.getLevel() : int`
-* `<Logger>.showIcons(<true | false>)`
-* `<Logger>.hasIcons() : boolean`
 
 ## Coming soon
 - [x] Colorful Logger
 - [x] Logging level
-- [ ] NPM package
+- [x] Objects logging
+- [x] NPM package
 - [ ] Print to file
 - [ ] Print to write stream

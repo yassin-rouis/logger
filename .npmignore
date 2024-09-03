@@ -2,3 +2,5 @@
 node_modules/
 src/
 index.ts
+pnpm-lock.yaml
+.idea

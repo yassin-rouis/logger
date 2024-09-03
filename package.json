@@ -1,6 +1,6 @@
 {
   "name": "@yassinrouis/logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple and colorful logger for NodeJS !",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "name": "Mohamed-Yassin ROUIS",
     "url": "https://yassinrouis.com/"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0"
   },

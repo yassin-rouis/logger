@@ -1,8 +1,8 @@
 
 ![favorite](https://img.shields.io/badge/ROUIS'%20favorite-%E2%AD%90-yellow?style=flat)
-![version](https://img.shields.io/badge/version-1.0.1-blue?style=flat)
+![version](https://img.shields.io/badge/version-1.0.3-blue?style=flat)
 
-# Logger
+# Logger (Baby's Update - v1.0)
 
 ## Table of contents
 * [Introduction](#introduction)

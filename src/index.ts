@@ -1,4 +1,4 @@
-import Logger from "./src/Logger";
+import Logger from "./Logger";
 
 module.exports = Logger;
 export default Logger;

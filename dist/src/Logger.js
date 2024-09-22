@@ -192,3 +192,4 @@ class Logger {
     }
 }
 module.exports = Logger;
+exports.default = Logger;

@@ -50,6 +50,25 @@ type LoggerConstructor = {
 class Logger {
     #loggingLevel: number;
 
+
+    static VERBOSE  = Level.VERBOSE;
+    static DEBUG    = Level.DEBUG;
+    static LOG      = Level.LOG;
+    static INFO     = Level.INFO;
+    static SUCCESS  = Level.SUCCESS;
+    static WARN     = Level.WARN;
+    static ERROR    = Level.ERROR;
+    static FATAL    = Level.FATAL;
+
+    declare verbose: (...args: any[]) => void;
+    declare debug: (...args: any[]) => void;
+    declare log: (...args: any[]) => void;
+    declare info: (...args: any[]) => void;
+    declare success: (...args: any[]) => void;
+    declare warn: (...args: any[]) => void;
+    declare fatal: (...args: any[]) => void;
+    declare error: (...args: any[]) => void;
+
     static #defaultTheme: Theme = {
         verbose: {
             level: Level.VERBOSE,

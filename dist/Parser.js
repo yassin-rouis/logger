@@ -140,7 +140,7 @@ class Parser {
             let result = colors_1.default.white("{ ");
             for (let i = 0; i < parts.length; i++) {
                 let part = parts[i];
-                if (i !== 0)
+                if (i != 0)
                     result += colors_1.default.white(", ");
                 result += part[0] + colors_1.default.white(": ") + part[1];
             }
@@ -151,7 +151,7 @@ class Parser {
             let result = colors_1.default.white("{");
             for (let i = 0; i < parts.length; i++) {
                 let part = parts[i];
-                if (i !== 0)
+                if (i != 0)
                     result += colors_1.default.white(",");
                 result += "\n" + this.$tabulation.repeat(tabulation + 1) + part[0] + colors_1.default.white(": ") + part[1];
             }
@@ -174,8 +174,8 @@ class Parser {
             else {
                 let result = colors_1.default.white("[");
                 for (let i = 0; i < parts.length; i++) {
-                    if (i % 3 === 0) {
-                        result += (i === 0 ? "\n" : colors_1.default.white(",") + "\n") + this.$tabulation.repeat(tabulation + 1) + parts[i];
+                    if (i % 3 == 0) {
+                        result += (i == 0 ? "\n" : colors_1.default.white(",") + "\n") + this.$tabulation.repeat(tabulation + 1) + parts[i];
                     }
                     else {
                         result += colors_1.default.white(", ") + parts[i];

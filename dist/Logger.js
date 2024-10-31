@@ -20,6 +20,14 @@ var Level;
 // LOGGER ==========================================
 class Logger {
     #loggingLevel;
+    static VERBOSE = Level.VERBOSE;
+    static DEBUG = Level.DEBUG;
+    static LOG = Level.LOG;
+    static INFO = Level.INFO;
+    static SUCCESS = Level.SUCCESS;
+    static WARN = Level.WARN;
+    static ERROR = Level.ERROR;
+    static FATAL = Level.FATAL;
     static #defaultTheme = {
         verbose: {
             level: Level.VERBOSE,
@@ -153,7 +161,7 @@ class Logger {
                 partLines = parsedPart.split('\n');
             }
             for (let i = 0; i < partLines.length; i++) {
-                if (i === 0 && lines.length !== 0) {
+                if (i == 0 && lines.length != 0) {
                     lines[lines.length - 1] += colorPrefix + " " + partLines[i] + colorSuffix;
                 }
                 else {
@@ -174,7 +182,7 @@ class Logger {
         // |+- icon
         // +- logIcon
         for (let i = 0; i < lines.length; i++) {
-            Logger.#logLine(multiline, i === 0, i === 0 ? (icon !== " " ? icon : (multiline ? "┭" : " ")) : i === lines.length - 1 ? "╰" : "│", logType, lines[i], displayColors);
+            Logger.#logLine(multiline, i == 0, i == 0 ? (icon != " " ? icon : (multiline ? "┭" : " ")) : i == lines.length - 1 ? "╰" : "│", logType, lines[i], displayColors);
         }
     }
     static #logLine(isMultiline, isPrimary, icon, logType, text, displayColors) {

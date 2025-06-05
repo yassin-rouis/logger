@@ -1,6 +1,6 @@
 {
   "name": "@yassinrouis/logger",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A simple and colorful logger for NodeJS !",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

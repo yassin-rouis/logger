@@ -56,8 +56,8 @@ class Logger {
             style: {
                 icon: { fore: "blue", back: undefined, style: undefined },
                 time: { fore: "white", back: "black", style: undefined },
-                type: { fore: "white", back: "grey", style: undefined },
-                text: { fore: "white", back: undefined, style: undefined }
+                type: { fore: "brightWhite", back: "blue", style: undefined },
+                text: { fore: "brightWhite", back: undefined, style: undefined }
             },
         },
         success: {
